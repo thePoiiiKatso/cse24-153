@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BabyWorld</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="cssstyle.css" />
+  <style>
+    .carousel-item {
+      height: 90vh;
+      min-height: 400px;
+      background: no-repeat center center scroll;
+      background-size: cover;
+    }
+    .carousel-item img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    .carousel-caption {
+      bottom: 20%;
+    }
+    .carousel-caption h4,
+    .carousel-caption p {
+      color: #333;
+    }
+    .carousel-caption {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+  <div class="nav__bar">
+    <h1 class="logo"></h1>
+    <nav class="nav_links_wrapper">
+      <ul class="nav__links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>   
+
+  <div id="aboutCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="4000">
+        <img src="img/Smiling.jpg" class="d-block w-100" alt="Smiling baby" />
+        <div class="carousel-caption d-none d-md-block">
+          <h4>Our Mission</h4>
+          <p>BabyCare is your trusted partner in childcare, dedicated to providing safe, loving, and reliable babysitting services and quality baby products.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <img src="img/Laughing.jpg" class="d-block w-100" alt="Baby playing with toys" />
+        <div class="carousel-caption d-none d-md-block">
+          <h4>Our Story</h4>
+          <p>Founded with care and passion, BabyCare bridges the gap between busy parents and professional caregivers.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <img src="img/better.jpg" class="d-block w-100" alt="Baby laughing" />
+        <div class="carousel-caption d-none d-md-block">
+          <h4>Our Values</h4>
+          <p>We value safety, compassion, and community — because your family matters.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <footer class="footer">
+  <div class="footer__content">
+    <p>&copy; 2025 BabyCare. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

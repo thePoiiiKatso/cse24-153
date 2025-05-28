@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BabyCare | Login</title>
+  <link rel="stylesheet" href="cssstyle.css" />
+</head>
+<body>
+
+  <div class="container" style="max-width: 400px; margin: 100px auto;">
+    <h2 style="text-align: center; margin-bottom: 1.5rem;">Login to BabyWorld</h2>
+    <form id="loginForm">
+      <div style="margin-bottom: 1rem;">
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" required style="width: 100%; padding: 0.5rem;" />
+      </div>
+      <div style="margin-bottom: 1.5rem;">
+        <label for="password">Password:</label><br />
+        <input type="password" id="password" required style="width: 100%; padding: 0.5rem;" />
+      </div>
+      <button type="submit" class="btn" style="width: 100%;">Login</button>
+      <p style="margin-top: 1rem; text-align: center;">
+        Don't have an account? <a href="signup.html">Sign Up</a>
+      </p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      const user = JSON.parse(localStorage.getItem("babycareUser"));
+
+      if (user && user.email === email && user.password === password) {
+        localStorage.setItem("isLoggedIn", "true");
+        alert("Login successful! Welcome to BabyWorld.");
+        window.location.href = "home.html";
+      } else {
+        alert("Invalid email or password. Please try again or sign up.");
+      }
+    });
+  </script>
+  
+</body>
+</html>

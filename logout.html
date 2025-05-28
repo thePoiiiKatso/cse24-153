@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logout</title>
+
+  <!-- Prevent browser caching -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 150px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1 {
+      color: #d63384; /* Pink color */
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  </style>
+
+  <script>
+    // Prevent back navigation
+    history.replaceState(null, null, location.href);
+
+    // Delay redirection by 2 seconds so user sees the message
+    setTimeout(() => {
+      window.location.href = "index.html"; // Your login page
+    }, 2000);
+  </script>
+</head>
+<body>
+  <h1>You’ve been successfully logged out.</h1>
+  <p>Thanks for visiting our BabyWorld page.</p>
+</body>
+</html>
